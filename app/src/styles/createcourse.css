@@ -1,0 +1,37 @@
+.create-course-form {
+    max-width: 1280rem;
+    text-align: center;
+}
+
+.form-submit-section {
+    display: inline-block;
+}
+
+.form-fields {
+    width: 80%;
+    max-width: 550px;
+}
+
+.ng-dirty.ng-invalid {
+    border-color: red;
+}
+
+.create-course-form-submitted {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.ng-dirty.ng-valid {
+    border-color: lightgreen;
+}
+
+@media screen and (max-width: 600px) {
+    .form-group-label {
+        display: block;
+    }
+}
+@media screen and (min-width: 601px) {
+    .form-group-label {
+        padding-right: 1.2rem;
+    }
+}

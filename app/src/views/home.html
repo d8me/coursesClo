@@ -1,0 +1,26 @@
+<div class="jumbotron text-center">
+    <div>
+        <h1>Courses Home</h1>
+    </div>
+</div>
+<div class="courses-home container-fluid">
+    <div class="row course-list" ng-if="!mainCtrl.loading">
+        <div class="course-item" ng-repeat="course in mainCtrl.courses" ng-if="mainCtrl.courses.length > 0">
+            <div class="course-name">
+                {{course.name}}
+            </div>
+            <div class="course-author">
+                By: {{course.author}}
+            </div>
+            <div class="course-price">
+                {{course.price}} rs.
+            </div>
+        </div>
+        <div class="no-courses" ng-if="mainCtrl.courses.length == 0">
+            There are no courses yet. Go to create course page.
+        </div>
+    </div>
+    <div class="row courses-loading" ng-if="mainCtrl.loading">
+        Courses are loading!!!
+    </div>    
+</div>

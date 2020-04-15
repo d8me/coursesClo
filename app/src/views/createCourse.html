@@ -1,0 +1,26 @@
+<div class="jumbotron text-center">
+    <h1>Create course</h1>
+</div>
+<div class="create-course-form" ng-if="!createCourseCtrl.formSubmitSuccess">
+    <form name="createCourseCtrl.form" class="container-fluid" novalidate>
+        <div class="row form-group">
+            <label class="form-group-label">Course</label>
+            <input class="form-fields" ng-required="true" type="text" ng-model="createCourseCtrl.formData.name"><br>
+        </div>
+        <div class="form-group">
+            <label class="form-group-label">Author</label>
+            <input class="form-fields" ng-required="true" type="text" ng-model="createCourseCtrl.formData.author"><br>
+        </div>
+        <div class="form-group">
+            <label class="form-group-label">Price</label><!--
+            --><input class="form-fields" ng-required="true" type="number" ng-model="createCourseCtrl.formData.price"><br>
+        </div>
+        <div class="form-submit-section">
+            <button class="btn btn-primary" ng-disabled="createCourseCtrl.form.$invalid" ng-click="createCourseCtrl.submit()">SUBMIT</button>
+            <button class="btn btn-secondary" ng-click="createCourseCtrl.resetForm()">RESET</button>
+        </div>
+    </form>
+</div>
+<div class="create-course-form-submitted" ng-if="createCourseCtrl.formSubmitSuccess">
+    The course has been created!!! Navigate to home page to view.
+</div>
